@@ -18,9 +18,16 @@ object Test extends App {
     |  """.stripMargin
 
 
-  println(Env.parse(instrument))
   import Env._
-  assert(Env.parse(instrument) == Option(ExerciseDate("10500/10/10","automatic"),OptionsCount("20","100"),Count("one"),Premium("100500","DB","NEDB","10500/10/10")))
+  
+  val expected = Option(
+    ExerciseDate("10500/10/10","automatic"),
+    OptionsCount("20","100"),
+    Count("one"),
+    Premium("100500","DB","NEDB","10500/10/10")
+  )
+  
+  assert(Env.parse(instrument) == expected)
 
 
 
