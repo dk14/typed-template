@@ -52,7 +52,6 @@ object typeConstructorMacro {
         val separators = (l.head.before.s :: l.zip(l.tail).map(x => x._1.after.s + x._2.before.s)) :+ l.last.after.s
         val regexp = " *" + separators.mkString(" *([^ ]*?) *")
         ParserConfiguration(regexp, separators.size - 1, bigStart(l.head.name))
-
     }
 
     val output = inputs.head match {
