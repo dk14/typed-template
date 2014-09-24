@@ -24,7 +24,7 @@ Input:
       pay premium 100500 from DB to NEDB at 10500/10/10  
 
 
-Code:
+Usage:
    
     @generator(source = "option.template") object Env
     Env.parse(instrument)
