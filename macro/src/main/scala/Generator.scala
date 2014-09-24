@@ -95,12 +95,4 @@ object typeConstructorMacro {
     println(output)
     c.Expr[Any](output)
   }
-
-
-
-
-}
-
-object Experiment extends App {
-
 }
