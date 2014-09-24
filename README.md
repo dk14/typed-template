@@ -9,10 +9,10 @@ Example
 Grammar:
 
     instrument {name} is Option
-    exercise at {exerciseDate: Date} {automatic: String}
-      {optionsCount: Count} options with strike {strike: Money}
-      with {count: Count = one} underlyer
-      pay premium {premium: Money} from {partyFrom: Party} to {partyTo: Party} at {premiumDate: Date}
+    exercise at {exerciseDate: String} {automatic: String}
+      {optionsCount: String} options with strike {strike: String}
+      with {count: String} underlyer
+      pay premium {premium: String} from {partyFrom: String} to {partyTo: String} at {premiumDate: String}
   
 
 Input:
