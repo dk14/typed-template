@@ -24,6 +24,10 @@ object Test extends App {
     Premium("100500","DB","NEDB","10500/10/10")
   )
   
-  assert(Env.parse(instrument) == expected)
+  val result = Env.parse(instrument)
+  
+  println(result)
+  
+  assert(result == expected)
 
 }
