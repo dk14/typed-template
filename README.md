@@ -32,4 +32,11 @@ Code:
 
 Output AST: 
 
-    Option(ExerciseDate(10500/10/10,automatic),OptionsCount(20,100),Count(one),Premium(100500,DB,NEDB,10500/10/10))
+    Env.Option(
+      Env.ExerciseDate(10500/10/10,automatic),
+      Env.OptionsCount(20,100),
+      Count(one),
+      Env.Premium(100500,DB,NEDB,10500/10/10)
+    )
+    
+
