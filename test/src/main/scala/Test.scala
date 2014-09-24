@@ -2,8 +2,6 @@
  * Created by user on 9/24/14.
  */
 
-
-
 object Test extends App {
 
   @generator(source = "option.template") object Env
