@@ -39,13 +39,14 @@ Output AST:
       Env.Premium(100500,DB,NEDB,10500/10/10)
     )
     
-Run test: 
+Try: 
+    
     git checkout https://github.com/dk14/typed-template.git
     brew install sbt
     sbt
     ;clean;test/runMain Test
     
-Note: macroparadise must be added to use this macro
+Note: macroparadise must be added to use this macro in client module
 
     autoCompilerPlugins := true,
     resolvers in ThisBuild  += Resolver.sonatypeRepo("releases"),
