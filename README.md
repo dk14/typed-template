@@ -24,6 +24,12 @@ Input:
       pay premium 100500 from DB to NEDB at 10500/10/10  
 
 
-AST: 
+Code:
+   
+    @generator(source = "option.template") object Env
+    Env.parse(instrument)
+
+
+Output AST: 
 
     Option(ExerciseDate(10500/10/10,automatic),OptionsCount(20,100),Count(one),Premium(100500,DB,NEDB,10500/10/10))
