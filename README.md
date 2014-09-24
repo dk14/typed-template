@@ -1,7 +1,7 @@
 typed-template
 ==============
 
-This macro generates parser, based on user-friendly simplified grammar from external resource.
+This macro generates parser, based on user-friendly simplified grammar.
 AST returned by parser will be typesafe (tree of case classes)
 
 Example
