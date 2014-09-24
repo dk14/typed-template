@@ -41,7 +41,7 @@ Output AST:
     
 Try: 
     
-    git checkout https://github.com/dk14/typed-template.git
+    git clone https://github.com/dk14/typed-template.git
     brew install sbt
     sbt
     ;clean;test/runMain Test
