@@ -29,10 +29,6 @@ trait GrammarParser extends RegexParsers {
   def parse(s: String) = parseAll(instrument, s)
 }
 
-trait Env {
-  def parse(what: String) = ???
-}
-
 object typeConstructorMacro {
 
   def impl(c: Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
