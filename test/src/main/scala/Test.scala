@@ -6,9 +6,7 @@
 
 object Test extends App {
 
-
   @generator(source = "option.template") object Env
-
 
   val instrument = """instrument Equty is Option
     |exercise at 10500/10/10 automatic
@@ -16,7 +14,6 @@ object Test extends App {
     |  with one underlyer
     |  pay premium 100500 from DB to NEDB at 10500/10/10
     |  """.stripMargin
-
 
   import Env._
   
@@ -28,8 +25,5 @@ object Test extends App {
   )
   
   assert(Env.parse(instrument) == expected)
-
-
-
 
 }
