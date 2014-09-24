@@ -39,4 +39,11 @@ Output AST:
       Env.Premium(100500,DB,NEDB,10500/10/10)
     )
     
+Note: macroparadise must be added to use this macro
+
+    autoCompilerPlugins := true,
+    resolvers in ThisBuild  += Resolver.sonatypeRepo("releases"),
+    libraryDependencies += "org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full,
+    addCompilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
+    
 
