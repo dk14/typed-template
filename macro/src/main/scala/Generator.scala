@@ -41,7 +41,9 @@ object typeConstructorMacro {
     def bigStart(s: String) = s.updated(0, s.head.toUpper)
     def lines = grammar.l.map(_.l).filter(_.nonEmpty)
     def params = lines.map(_.head.name).map(x => q"val ${newTermName(x)}: ${newTypeName(bigStart(x))}")
-    val classes = lines.map(l => q"case class ${newTypeName(bigStart(l.head.name))} (..${l.map(x => q"val ${newTermName(x.name)}: ${newTypeName("String")}")})")
+    val classes = lines.map(l => q"case class ${newTypeName(bigStart(l.head.name))} (..${
+           l.map(x => q"val ${newTermName(x.name)}: ${newTypeName("String")}")
+    })")
 
     val defs = List(q"case class ${newTypeName(grammar.h.typ)}( ..$params)") ++ classes
 
