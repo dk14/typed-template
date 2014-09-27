@@ -29,12 +29,12 @@ trait GrammarParser extends RegexParsers {
   def parse(s: String) = parseAll(instrument, s)
 }
 
-object typeConstructorMacro {
+object typeConstructorMacro extends GrammarParser {
 
   def impl(c: Context)(annottees: c.Expr[Any]*): c.Expr[Any] = {
     import scala.io.Source
     val grammarRaw = Source.fromURL(this.getClass.getResource("/option.template")).getLines().mkString("\n")
-    val grammar = new GrammarParser {}.parse(grammarRaw).get
+    val grammar = parse(grammarRaw).get //TODO handle errors
     import c.universe._
     val inputs = annottees.map(_.tree).toList
 
