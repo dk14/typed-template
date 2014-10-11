@@ -1,7 +1,7 @@
 typed-template
 ==============
 
-This macro generates parser, based on user-friendly simplified external grammar.
+This macro generates parser from user-friendly external grammar.
 AST returned from such parser will be typesafe (tree of case classes)
 
 Example
@@ -46,7 +46,7 @@ Try:
     sbt
     ;clean;test/runMain Test
     
-Note: macroparadise must be added to use this macro in client module
+Note: macroparadise must be added in client module to use this macro 
 
     autoCompilerPlugins := true,
     resolvers in ThisBuild  += Resolver.sonatypeRepo("releases"),
