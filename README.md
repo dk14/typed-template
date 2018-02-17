@@ -17,7 +17,7 @@ Grammar:
 
 Input:
 
-    instrument Equty is Option
+    instrument Equity is Option
       exercise at 10500/10/10 automatic
       20 options with strike 100
       with one underlyer
